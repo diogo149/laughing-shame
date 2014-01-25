@@ -7,7 +7,8 @@
            [com.mongodb DB WriteConcern])
   (:require [compojure.handler :as handler]
             [compojure.route :as route]
-            [monger.collection :as mc]))
+            [monger.collection :as mc])
+  (:gen-class))
 
 (connect!)
 (set-db! (monger.core/get-db "monger-test"))
